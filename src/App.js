@@ -1,5 +1,4 @@
 import logo from './loading.gif';
-import './App.css';
 
 function App() {
   return (

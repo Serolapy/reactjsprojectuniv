@@ -1,6 +1,130 @@
+:root{
+	--text-color: rgb(237, 237, 237);
+	--background-color: #696969;
+}
+/* Обычный */
+@font-face {
+	font-family: 'Palatino Linotype';
+	font-style: normal;
+	font-weight: normal;
+	src: local('Palatino Linotype'),
+		url('fonts/palatinolinotype_roman.ttf');
+}
+/* курсив */
+@font-face {
+	font-family: 'Palatino Linotype';
+	font-style: italic;
+	font-weight: normal;
+	src: local('Palatino Linotype'),
+		url('fonts/palatinolinotype_italic.ttf');
+}
+/* полужирный */
+@font-face {
+	font-family: 'Palatino Linotype';
+	font-style: normal;
+	font-weight: bold;
+	src: local('Palatino Linotype'),
+		url('fonts/palatinolinotype_bold.ttf');
+}
+/* полужирный курсив */
+@font-face {
+	font-family: 'Palatino Linotype';
+	font-style: italic;
+	font-weight: bold;
+	src: local('Palatino Linotype'),
+		url('fonts/palatinolinotype_bolditalic.ttf');
+}
+@keyframes Loading {
+	from {
+	  transform: rotate(0deg);
+	}
+	to {
+	  transform: rotate(360deg);
+	}
+  }
+
 body {
-  background: #696969;
-  color: white;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  overflow-y: hidden;
+	background: var(--background-color);
+	color: var(--text-color);
+	font-family: 'Palatino Linotype'; 
+	padding: 0;
+	margin: 0;
+}
+input{
+	background: none;
+	color: var(--text-color);
+	border: 3px solid var(--text-color);
+	border-radius: 66px;
+	transition: 0.5s;
+	cursor: pointer;
+}
+input:hover{
+	background-color: var(--text-color);
+	color: var(--background-color);
+}
+a{
+	color: var(--text-color);
+	font-style: italic;
+}
+a:hover{
+	text-decoration: none;
+}
+#center_text{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+
+	text-align: center;
+	font-size: 50px;
+}
+	#center_text input{
+		width: 242px;
+		height: 77px;
+		font-size: 50px;
+		margin-top: 32px;
+	}
+	.loadingImg{
+		width: 300px;
+		height: 300px;
+		display: block;
+		animation: Loading infinite 1s linear;
+	}
+
+#users{
+	text-align: center;
+
+}
+	.user{
+		display: inline-block;
+		width: 300px;
+		height: 216px;
+		border: 3px solid var(--text-color);
+		border-radius: 17px;
+		margin: 17.5px;
+		padding: 10px 20px;
+		text-align: left;
+		font-size: 15px;
+		position: relative;
+	}
+		.userImg{
+			float: left;
+			margin-right: 20px;
+		}
+		.userName{
+			font-weight: bold;
+			font-style: italic;
+		}
+		.userBlogs{
+			width: 128px;
+			height: 29px;
+			font-size: 20px;
+			position: absolute;
+			bottom: 6px;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+
+#blogs{
+	margin: 20px;
 }
